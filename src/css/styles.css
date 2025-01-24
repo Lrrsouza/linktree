@@ -1,0 +1,119 @@
+:root {
+    --color-primary: #193940;
+    --color-secondary: #BAC8D9;
+    --color-accent: #9BF272;
+    --color-accent-dark: #7ABF5A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    margin-bottom: 80px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--color-accent);
+    padding: 4px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.profile p {
+    color: var(--color-accent);
+    font-size: 18px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-card {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-accent);
+}
+
+.link-card i {
+    font-size: 24px;
+}
+
+.link-card span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-secondary);
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(25, 57, 64, 0.9); /* Versão semi-transparente do --color-primary */
+} 
